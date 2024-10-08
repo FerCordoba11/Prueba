@@ -1,0 +1,511 @@
+/* Maquetado General */
+* {
+    background-image: url(../images/madera_black.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+#bodygeneral {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px auto 100px;
+    grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+}
+#headergeneral {
+    grid-area: header;
+    height: 100px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#maingeneral {
+    grid-area: main;
+    /* background-color: yellowgreen; */
+    padding-top: 50px;
+    height: auto;
+    width: 100%;
+}
+#footer {
+    grid-area: footer;
+    height: 100px;
+    width: 100%;
+    /* background-color: blue; */
+}
+
+/* Header - Barra de Navegación General */
+#navbar {
+    display: flex;
+    /* background-color: rgb(133, 133, 133); */
+    position:fixed;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+}
+.logotipo{
+    height: 100px;
+    width: auto;
+}
+.nav-link{
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-decoration:none;
+    text-decoration-line: none;
+}
+.nav-link:hover{
+    color: red;
+    transition: .9s;
+}
+.nav-item {
+    display: inline-block;
+    align-items:center;
+}
+/* Media queries */
+@media (max-width: 768px) {
+    #bodygeneral {
+        grid-template-rows: 80px auto; 
+        padding-top: 80px;
+    }
+
+    #headergeneral {
+        height: 80px; 
+    }
+}
+
+@media (max-width: 480px) {
+    #bodygeneral {
+        grid-template-rows: 60px auto; 
+        padding-top: 60px;
+    }
+
+    #headergeneral {
+        height: 60px;
+    }
+}
+
+
+
+/* INDEX - Main */
+
+#Parrafoindex {
+    color: white;
+    font-family: "EB Garamond", serif;
+    font-size: 25px;
+    text-align: center;
+    padding: 0% 10%;
+
+}
+
+main p span{
+    color:rgb(216, 16, 16);
+    font-weight: bolder;
+}
+
+.card {
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.card img {
+    max-width: 50%;
+    height: auto;
+}
+
+.T2 , .T3, .T4 {color: rgb(237, 1, 1);
+    text-align: center;
+    font-family: "EB Garamond", serif;;
+    }
+
+.imagest2, .imagest3, .imagest4 {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    gap: 20px;
+}
+
+
+/* CONTACTO - Main */
+
+#section1 {
+    margin-bottom: 200px;
+    padding: 0px 15%;
+    border-radius: 8px;
+    padding-top: 1px;
+    text-align: center;
+    text-decoration: none;
+}
+#section1 div p {
+    font-size: 20px;
+    color: white;
+}
+#section1 div p strong {
+    font-size: 22px;
+    color: red;
+}
+#section2 {
+    font-size: 22px;
+}
+
+#section3 ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+#map {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 450px;
+
+}
+
+/* @media (max-width: 768px) {
+    .section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-toggler {
+        
+        z-index: 101;
+    }
+    .navbar-collapse {
+        position: absolute;
+        top: 100%; 
+        left: 0;
+        right: 0;
+
+        z-index: 101; 
+    }
+} */
+
+/* TRABAJOS - Main */
+.trabajos{
+    display: grid;
+    padding-right: 5%;
+    padding-left: 5%;
+    height: auto;
+    width: 100%;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: repeat(5, auto);
+    gap: 10px;
+    grid-template-areas: "aside mesas"
+    "aside alacenas"
+    "aside escaleras"
+    "aside puertas"
+    "aside rack";
+}
+/* Aside */
+.aside{
+    /* background-color: #bcb915; */
+    grid-area: aside;
+    color: white;
+    margin: 5px;
+    height: 100%;
+    width: 200px;
+}
+.asideli {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    list-style-type: none;
+}
+.asideli a {
+    font-size:20px ;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    text-decoration-style: none;
+    margin: 2rem;
+}
+
+/* Trabajos */
+
+#mesas h1 {
+    color: white;
+    margin: 0% 50%;
+}
+
+
+.imgS1_trabajos{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.a1, .a2, .a3, .a4{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.a1img, .a2img, .a3img, .a4img {
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    border: 7px solid black;
+}
+.a1P, .a2P, .a3P, .a4P {
+    color: rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+
+.b1, .b2, .b3, .b4 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.b1img, .b2img, .b3img, .b4img {
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    border: 7px solid black;
+}
+.b1P, .b2P, .b3P, .b4P { 
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+
+.c1, .c2, .c3, .c4 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.c1img, .c2img, .c3img, .c4img {
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    border: 7px solid black;
+}
+.c1P, .c2P, .c3P, .c4P {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+.d1, .d2, .d3, .d4 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.d1img, .d2img, .d3img, .d4img {
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    border: 7px solid black;
+}
+.d1P, .d2P, .d3P, .d4P {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+.e1, .e2, .e3, .e4 {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.e1img, .e2img, .e3img, .e4img {
+    width: 350px;
+    height: auto;
+    margin: 20px;
+    border: 7px solid black;
+}
+.e1P, .e2P, .e3P, .e4P {
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 30px;
+}
+
+@media (max-width: 768px) {
+    .trabajos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "aside"
+            "mesas"
+            "alacenas"
+            "escaleras"
+            "puertas"
+            "rack";
+    }
+    .aside {
+        display: flex;
+        position: relative;
+        height: 100px;
+        width: auto;
+    }
+    .asideli {
+        flex-direction: row;
+        flex-wrap: wrap;
+        position:fixed;
+        top: 120px;
+    }
+}
+
+@media (max-width: 480px) {
+    .trabajos {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+            "aside"
+            "mesas"
+            "alacenas"
+            "escaleras"
+            "puertas"
+            "rack";
+        padding-right: 2%;
+        padding-left: 2%;
+    }
+}
+
+/* TIENDA - Main */
+.containertienda{
+    display: grid;
+    /* padding-top: 25vh; */
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "asidetienda tiendacontainer";
+}
+
+.asidetienda {
+    /* background-color: #bcb915; */
+    grid-area: asidetienda;
+    display: flex;
+
+    width: 100%;
+    padding: 0px 30px;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    /* background-color: aqua; */
+    /* box-sizing:content-box; */
+}
+/* .asidetext {
+    
+} */
+.contactanos {
+    color: red;
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+.tiendacontainer {
+    grid-area: tiendacontainer;
+    /* background-color: blue;
+    border: 5px white solid; */
+    /* margin-left: 20px; */
+}
+.tiendah2 {
+    display: flex;
+    color: white;
+    justify-content: center;
+    font-style: italic;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.galeria {
+    /* background-color: aqua; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardtienda {
+    width: 25rem;
+    margin: 2rem;
+    border-radius: 8px;
+}
+.card-img-top {
+    padding-bottom: 1rem;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 8px;
+}
+.card-img-top:hover {
+    transform: scale(1.1);
+    transition: 0.9s;
+}
+.card-title {
+    color: white;
+}
+.card-text{
+    color: white;
+}
+
+.tiendaimg {
+    width: 350px;
+    height: auto;
+}
+
+@media (max-width: 900px) {
+    .containertienda {
+        grid-template-columns: 100%;
+        grid-template-rows: 200px auto;
+        grid-template-areas: 
+            "asidetienda"
+            "tiendacontainer";
+    }
+    .asidetienda {
+        flex-direction: row;
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 480px) {
+    .containertienda {
+        grid-template-columns: 1fr;
+        grid-template-rows: 230px auto;
+        grid-template-areas: 
+            "asidetienda"
+            "tiendacontainer";
+    }
+}
+
+
+/* SOBRE NOSOTROS - Main */
+.containernosotros {
+    padding: 20px;
+}
+.text-center{
+    color: white;
+}
+.sectionNos {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    /* background-color: #ffffff; */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sectionNos img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/*  */
+
+#footer {
+    grid-area: footer;
+    height: 100px;
+    width: 100%;
+    /* background-color: blue; */
+}
+
